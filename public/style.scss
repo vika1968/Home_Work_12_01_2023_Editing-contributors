@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,body{
+    height: 100%;    
+}
+
+.searchZone{
+    padding: 15px; 
+    text-align: center;     
+}
+
+.wrapper {  
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+    
+    .card_list {
+        width: 1100px;
+        height: 700px;
+        display: flex;
+        flex-wrap: wrap;        
+
+        .card {
+            padding: 5px 5px;    
+             width: calc(33% - 10px);
+             text-align: center;
+         
+             
+             img{
+                width: 280px;
+                height: 250px;
+             }
+        }
+    }
+}
+
+
+

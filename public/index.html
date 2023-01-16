@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emloyees</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.js"
+        integrity="sha512-rozBdNtS7jw9BlC76YF1FQGjz17qQ0J/Vu9ZCFIW374sEy4EZRbRcUZa2RU/MZ90X2mnLU56F75VfdToGV0RiA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="searchZone">
+            <form id="handleEmloyeeByID">
+                <h3>GET EMPLOYEE BY ID</h3>
+                <input type="number" id="employeeID" min = "1" max = "6" placeholder="Enter the id number from 1 to 6" style="width: 300px;" required>
+                <button type="submit" class="btnFindbyID">Find employee by ID</button>
+            </form>
+            <br>
+            <h3>ADD NEW EMPLOYEE</h3>
+            <form id="addNewEmloyee">
+                <input class="firstName" type="text" id="firstName" placeholder="Enter First Name here" required>
+                <input class="lastName" type="text" id="lastName" placeholder="Enter Last Name here" required>
+                <input class="age" type="text" id="age" placeholder="Enter age here">
+                <input class="address" type="text" id="address" placeholder="Enter address here">
+                <input class="IDEmployee" type="text" id="IDEmployee" placeholder="Enter IDEmployee here" required>
+                <select name="choose-gender" class="gender" id="gender">
+                    <option value="">--Please choose a gender--</option>
+                    <option value="male">male</option>
+                    <option value="female">female</option>
+                </select>
+                <button type="submit">Add Emmployee</button>
+            </form>
+            <br>
+            <h3>DELETE EMPLOYEE BY FIRST NAME AND LAST NAME (EXAMPLE : Stella Reed)</h3>
+            <form id="deleteEmploye">
+                <input type="text" id="empToDelete" placeholder="Enter First Name space and Last Name here to delete employee"  style="width: 300px;" required>
+                <button type="submit">Delete</button>
+            </form>
+            <br>
+            <h3>UPDATE EMPLOYEE BY ID</h3>
+            <form id="updateEmloyee">
+                <input type="number" id="employeeIDtoUpdate" min = "1" max = "6" placeholder="Enter the id number from 1 to 6" style="width: 300px;" required>
+                <input class="updFirstName" type="text" id="firstName" placeholder="Enter First Name here">
+                <input class="updLastName" type="text" id="lastName" placeholder="Enter Last Name here">
+                <input class="updAge" type="text" id="age" placeholder="Enter age here">
+                <input class="updAddress" type="text" id="address" placeholder="Enter address here">
+                <input class="updIDEmployee" type="text" id="IDEmployee" placeholder="Enter IDEmployee here">
+                <select name="choose-gender" class="updGender" id="gender">
+                    <option value="">--Please choose a gender--</option>
+                    <option value="male">male</option>
+                    <option value="female">female</option>
+                </select>
+                <button type="submit">Update Emmployee</button>
+            </form>
+    </div>
+    <div class="wrapper">
+        <div class="card_list">
+        </div>
+    </div>
+</body>
+
+<script src="./dist/app.js"></script>
+</html>
