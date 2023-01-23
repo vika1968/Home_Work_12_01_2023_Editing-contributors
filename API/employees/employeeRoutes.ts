@@ -13,5 +13,4 @@ router
 .post("/find", findEmployee)
 .patch("/:id", updateEmployee)
 
-
 export default router;
